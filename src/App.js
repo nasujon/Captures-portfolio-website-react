@@ -1,8 +1,8 @@
-
+import About from "./pages/About";
 function App() {
   return (
     <div>
-      <h1>Hello Portfolio</h1>
+      <About />
     </div>
   );
 }

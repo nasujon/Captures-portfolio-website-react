@@ -1,29 +1,41 @@
-import React from 'react'
-import heroImg1 from '../img/home1.png';
+import React from 'react';
+import { About, Description, Image } from '../styles';
+import styled from 'styled-components';
+//Images
+import homeImg1 from '../img/home1.png';
 const AboutSection = () => {
   return (
-    <div>
-      <div className="description">
+    <About>
+      <Description>
         <div className="title">
-          <div className="hide">
-            <h2>Welcome to </h2>
-          </div>
-          <div className="hide">
-            <h2><span>Our</span> youtube </h2>
-          </div>
-          <div className="hide">
-            <h2>channel </h2>
-          </div>
+          <Hide>
+            <h2>We work to make</h2>
+          </Hide>
+          <Hide>
+            <h2>
+              your <span>dreams</span> come
+            </h2>
+          </Hide>
+          <Hide>
+            <h2>true.</h2>
+          </Hide>
         </div>
+        <p>
+          Contact us for any photography or videography ideas that you have. We
+          have professionals with amazing skills to help you achieve it.
+        </p>
+        <button>Contact Us</button>
+      </Description>
+      <Image>
+        <img src={homeImg1} alt="camera guy" />
+      </Image>
+      
+    </About>
+  );
+};
 
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sunt ea facere nesciunt possimus suscipit odio numquam velit molestias quidem.</p>
-        <button>Get started</button>
-      </div>
-      <div className="side-img">
-        <img src={heroImg1} alt="dsd" />
-      </div>
-    </div>
-  )
-}
+const Hide = styled.div`
+  overflow: hidden;
+`;
 
-export default AboutSection
+export default AboutSection;

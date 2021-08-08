@@ -19,7 +19,7 @@ const Nav = () => {
           <Line/>
         </li>
         <li>
-          <Link to="/services">2. Our Work</Link>
+          <Link to="/work">2. Our Work</Link>
           <Line/>
         </li>
         <li>

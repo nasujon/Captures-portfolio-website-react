@@ -1,7 +1,7 @@
 import About from "./pages/About";
 import GlobalStyle from './components/GlobalStyled'
 import Nav from "./components/Nav";
-import Services from "./pages/Services";
+import OurWork from "./pages/OurWorks";
 import Contact from "./pages/Contact";
 import {Switch, Route} from 'react-router-dom'
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <Switch>
         <Route path="/" exact component={About} />
-        <Route path="/services" exact component={Services} />
+        <Route path="/work" exact component={OurWork} />
         <Route path="/contact" exact component={Contact} />
       </Switch>
       

@@ -3,7 +3,8 @@ import GlobalStyle from './components/GlobalStyled'
 import Nav from "./components/Nav";
 import OurWork from "./pages/OurWorks";
 import Contact from "./pages/Contact";
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom';
+
 function App() {
   return (
     <div>

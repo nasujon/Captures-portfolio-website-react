@@ -1,23 +1,65 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 import { MovieState } from '../movieState';
 
 const MovieDetail = () => {
 
+  const history = useHistory();
+  const url = history.location.pathname;
+  const [movies, setMovies] = useState(MovieState);
+  const [movie, setMovie] = useState(null);
+
+  //useEffect
+
+  useEffect(() => {
+    const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
+    setMovie(currentMovie[0]);
+  }, [movies, url]);
+
+  console.log(movie)
+
+  
 
   return (
     <>
+      {movie && (
+        <Details>
+          <HeadLine>
+            <h2>{movie.title}</h2>
+            <img src={movie.mainImg} alt="movie" />
+          </HeadLine>
 
+          <Awards>
+            {movie.awards.map((award)=> (
+              <Award title={award.title} description={award.description} key={award.title}/>
 
-
+            ))}
+          </Awards>
+          <ImageDisplay>
+            <img src={movie.secondaryImg} alt="secondaryImg" />
+          </ImageDisplay>
+        </Details>
+      )}
       
      
     </>
   );
 };
 
+const Award = ({title, description}) => {
+  return(
+    <AwardStyle>
+      <h3>{title}</h3>
+      <div className="line"></div>
+      <p>{description}</p>
+      
+    </AwardStyle>
+  )
+}
 
-const Details = styled(motion.div)`
+
+const Details = styled.div`
   color: white;
 `;
 const HeadLine = styled.div`
@@ -37,6 +79,7 @@ const HeadLine = styled.div`
   }
 `;
 
+
 const Awards = styled.div`
   min-height: 80vh;
   display: flex;
@@ -48,7 +91,6 @@ const Awards = styled.div`
     margin: 2rem 2rem;
   }
 `;
-
 const AwardStyle = styled.div`
   padding: 5rem;
   h3 {

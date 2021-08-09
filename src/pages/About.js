@@ -9,6 +9,7 @@ const About = () => {
       <ServicesSection />
       <FaqSection />
     </div>
+    
   )
 }
 

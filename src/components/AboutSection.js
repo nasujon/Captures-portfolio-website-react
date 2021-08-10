@@ -39,7 +39,7 @@ const AboutSection = () => {
   }
   const peraAnim = {
     hidden: {
-      x:10,
+      x:-10,
       opacity: 0
     },
     show:{

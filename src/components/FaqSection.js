@@ -2,55 +2,53 @@ import React from 'react'
 import styled from 'styled-components'
 import {About} from '../styles';
 import Toggle from '../components/Toggle'
+import { AnimateSharedLayout } from 'framer-motion';
 
 const FaqSection = () => {
 
 
 
   return (
+
     <Faq>
 
       <h2>Any questions <span>Faq</span></h2>
 
-      <Toggle>
-      <div className="question">
-        <h4>How do i start one?</h4>
+      <AnimateSharedLayout>
 
+      <Toggle title="how do i start">
+  
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eum?</p>
           </div>
-
-        <div className="faq-line"></div>
-      </div>
+    
       </Toggle>
 
-      <Toggle>
-      <div className="question">
-        <h4>How do i start ?</h4>
+      <Toggle title="how do i start 2">
+   
+        
 
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eum?</p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+
+    
       </Toggle>
    
 
    
-      <Toggle>
-      <div className="question">
-        <h4>How do i start it?</h4>
-
+      <Toggle title="how do i start 3">
+    
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eum?</p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+        
+
       </Toggle>
- 
+      </AnimateSharedLayout>
 
     </Faq>
   )
@@ -66,7 +64,8 @@ const Faq = styled(About)`
     padding: 10px;
   }
   h4{
-    font-size: 22px
+    font-size: 22px;
+    padding:15px 0;
   }
   .question{
     padding: 15px 0;

@@ -1,8 +1,10 @@
 //Styled
 import styled from 'styled-components';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-export const About = styled.div`
+
+
+export const About = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -15,6 +17,7 @@ export const About = styled.div`
     text-align: center;
   }
 `;
+
 export const Description = styled.div`
   flex: 1;
   z-index: 2;
@@ -29,6 +32,7 @@ export const Description = styled.div`
     }
   }
 `;
+
 export const Image = styled.div`
   flex: 1;
   z-index: 2;

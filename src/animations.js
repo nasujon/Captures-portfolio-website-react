@@ -107,3 +107,23 @@ export const sliderContainer ={
     }
   }
 } 
+
+
+
+
+export const scrollRev = {
+  hidden: {
+    opacity:0,
+    scale:1.1,
+    transition:{
+      duration:0.25
+    }
+  },
+  show:{
+    opacity:1,
+    scale:1,
+    transition:{
+      duration:.25
+    }
+  }
+}

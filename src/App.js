@@ -28,7 +28,7 @@ function App() {
         </Switch>
       </AnimatePresence>
     </div>
-  );
+  ); 
 }
 
 export default App;

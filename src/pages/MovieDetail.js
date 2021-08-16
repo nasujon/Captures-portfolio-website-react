@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { MovieState } from '../movieState';
 
-
 //Animation
-
 import {motion} from 'framer-motion';
 import { pageAnimation } from '../animations';
+import ScrollTop from '../components/ScrollTop'
 
 const MovieDetail = () => {
 
@@ -31,11 +30,12 @@ const MovieDetail = () => {
     <>
       {movie && (
         <Details variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+          <ScrollTop />
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
           </HeadLine>
-
+          
           <Awards>
             {movie.awards.map((award)=> (
               <Award title={award.title} description={award.description} key={award.title}/>
@@ -68,6 +68,7 @@ const Award = ({title, description}) => {
 const Details = styled(motion.div)`
   color: white;
 `;
+
 const HeadLine = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
@@ -97,6 +98,7 @@ const Awards = styled.div`
     margin: 2rem 2rem;
   }
 `;
+
 const AwardStyle = styled.div`
   padding: 5rem;
   h3 {
@@ -112,6 +114,7 @@ const AwardStyle = styled.div`
     padding: 2rem 0rem;
   }
 `;
+
 const ImageDisplay = styled.div`
   min-height: 50vh;
   img {

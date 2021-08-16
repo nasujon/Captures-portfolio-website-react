@@ -16,13 +16,14 @@ import {
   slider, 
   sliderContainer
 } from '../animations';
-
+import ScrollTop from '../components/ScrollTop';
 
 
 const OurWork = () => {
+  
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
-
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -84,7 +85,6 @@ const Movie = styled.div`
     object-fit: cover;
   }
 
- 
 
 `;
 

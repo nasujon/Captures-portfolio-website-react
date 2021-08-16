@@ -24,12 +24,10 @@ const FaqSection = () => {
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eum?</p>
           </div>
-    
       </Toggle>
 
       <Toggle title="how do i start 2">
    
-        
 
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>

@@ -14,10 +14,11 @@ const GlobalStyle = createGlobalStyle`
     body{
         background: #1b1b1b;
         font-family: 'Inter', sans-serif;
+        overflow-x:hidden;
         
     }
        
-    
+
     button{
         font-family: 'Inter', sans-serif;
         font-weight: bold;
@@ -33,13 +34,16 @@ const GlobalStyle = createGlobalStyle`
         color: white;
         }
     }
+
     h2{
         font-weight: lighter;
         font-size: 4rem;
     }
+
     h3{
         color:white;
     }
+
     p{
         padding: 3rem 0rem;
         color: #cccccc;
@@ -49,12 +53,15 @@ const GlobalStyle = createGlobalStyle`
     h4{
         font-size: 2.5rem;
     }
+
     span{
         font-weight: bold;
         color: #23d997;
     }
+
     a{
         font-size: 1.1.rem;
     }
+    
 `
 export default GlobalStyle;
